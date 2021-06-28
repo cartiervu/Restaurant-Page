@@ -1,4 +1,11 @@
+import './style.css';
+
 const content = document.getElementById('content');
+
+function switchTabs(tabFunction) {
+    content.removeChild(content.childNodes[0]);
+    tabFunction();
+}
 
 function initHeader() {
     const header = document.createElement('header');
@@ -16,7 +23,9 @@ function initHeader() {
 function initLogo() {
     const logoContainer = document.createElement('a');
     logoContainer.setAttribute('id', 'logo-container');
-    logoContainer.href = "#";
+    logoContainer.addEventListener('click', () => {
+        switchTabs(loadLandingPage);
+    });
 
     const logoImg = document.createElement('img');
     logoImg.setAttribute('id', 'logo-img');
@@ -42,12 +51,15 @@ function initNavTabs() {
 
     const menuButton = document.createElement('li');
     menuButton.setAttribute('id', 'menu-button');
+    menuButton.textContent = "menu";
 
     const aboutButton = document.createElement('li');
     aboutButton.setAttribute('id', 'about-button');
+    aboutButton.textContent = "about"
 
     const contactButton = document.createElement('li');
     contactButton.setAttribute('id', 'contact-button');
+    contactButton.textContent = "visit us";
 
     list.appendChild(menuButton);
     list.appendChild(aboutButton);
@@ -57,12 +69,80 @@ function initNavTabs() {
 }
 
 function loadHeader() {
-    content.appendChild(initHeader());
+    document.body.prepend(initHeader());
 }
 
-function landingPage() {
-
+function loadLandingPage() {
+    content.appendChild(initLandingPage());
 }
 
+function initLandingPage() {
+    const wrapper = document.createElement('div');
+    wrapper.appendChild(initHero());
+    wrapper.appendChild(initContactContainer());
+
+    return wrapper;
+}
+
+function initHero() {
+    const container = document.createElement('div');
+    container.setAttribute('id', 'hero');
+
+    const heroImage = document.createElement('img');
+    heroImage.setAttribute('id', 'hero-img');
+    heroImage.src = "../src/assets/restaurant.jpg";
+    container.appendChild(heroImage);
+
+    return container;
+}
+
+function initContactContainer() {
+    const container = document.createElement('div');
+    container.setAttribute('id', 'contact-container');
+    
+    container.appendChild(initContactInfoDiv("hours", "HOURS", "Monday to Friday - 9am to 5pm"));
+    container.appendChild(initLocationInfoDiv());
+
+    return container;
+}
+
+function initContactInfoDiv(id, title, infoText) {
+    const div = document.createElement('div');
+    div.setAttribute('id', id);
+
+    const divTitle = document.createElement('h1');
+    divTitle.textContent = title;
+    div.appendChild(divTitle);
+
+    if (infoText != undefined) {
+        const divInfo = document.createElement('h3');
+        divInfo.textContent = infoText;
+        div.appendChild(divInfo);
+    }
+
+    return div;
+}
+
+function initLocationInfoDiv() {
+    const locationDiv = initContactInfoDiv("location", "OUR LOCATION");
+
+    const locationText = document.createElement('h3');
+    locationText.innerHTML = "1055 Canada Place<br>Vancouver, BC<br>V6C 0C3";
+    locationDiv.appendChild(locationText);
+
+    const locationDirectionLink = document.createElement('a');
+    locationDirectionLink.setAttribute('id', 'directions');
+    locationDirectionLink.href = "https://goo.gl/maps/6o6frvtEdeVRTSKx5";
+    locationDirectionLink.target = "_blank";
+
+    const locationDirectionText = document.createElement('h3');
+    locationDirectionText.textContent = "Get Directions";
+    locationDirectionLink.appendChild(locationDirectionText);
+
+    locationDiv.appendChild(locationDirectionLink);
+
+    return locationDiv;
+}
 
 loadHeader();
+loadLandingPage();

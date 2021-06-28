@@ -10,6 +10,11 @@ body {
     align-items: center;
     justify-content: space-between;   
     padding: 10px 50px 10px 50px;
+    border-bottom: 2px solid black;
+}
+
+#logo-container, #menu-button, #about-button, #contact-button {
+    cursor: pointer;
 }
 
 #logo-container {
@@ -29,6 +34,8 @@ ul {
     display: inline;
     list-style-type: none;
     font-size: 1.2rem;
+    text-transform: uppercase;
+
 }
 
 li {
