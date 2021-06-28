@@ -1,4 +1,5 @@
 import './style.css';
+import img from '../src/assets/food-background.jpg'
 
 const content = document.getElementById('content');
 
@@ -76,6 +77,13 @@ function loadLandingPage() {
     content.appendChild(initLandingPage());
 }
 
+function loadMenuPage() {
+    content.appendChild(initMenuPage());
+}
+
+function initMenuPage() {
+}
+
 function initLandingPage() {
     const wrapper = document.createElement('div');
     wrapper.appendChild(initHero());
@@ -144,5 +152,5 @@ function initLocationInfoDiv() {
     return locationDiv;
 }
 
+
 loadHeader();
-loadLandingPage();

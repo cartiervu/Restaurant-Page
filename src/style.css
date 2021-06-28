@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: space-between;   
     padding: 10px 50px 10px 50px;
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
 }
 
 #logo-container, #menu-button, #about-button, #contact-button {
@@ -55,11 +55,85 @@ li {
     justify-content: space-between;
     background-color: black;
     color: white;
-    padding: 10px 50px 10px 35px;
+    padding: 10px 50px 10px 50px;
 }
 
 #directions {
     color: white;
     text-decoration: none;
+}
+
+
+
+#menu-header {
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#menu-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu-header-title {
+    font-weight: bold;
+    font-size: 5em;
+}
+
+#menu-header-description {
+    font-size: 1.5em;
+}
+
+#menu-image {
+    object-fit: contain;
+    margin-top: -30%;
+}
+
+#menu {
+    padding: 25px 150px 25px 150px;
+}
+
+.menu-col-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-left-col, .menu-right-col {
+    width: 50%;
+    min-width: 200px;
+}
+
+.item-container {
+}
+
+.menu-left-col {
+    padding-right: 15px;
+}
+
+.menu-right-col {
+    padding-left: 15px;
+}
+
+.item-name-price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-name {
+
+}
+
+.dish-type-container {
+    padding-top: 25px;
+}
+
+.item-description {
+    opacity: 50%;
 }
 
