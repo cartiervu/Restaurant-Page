@@ -54,8 +54,6 @@ function secondBodySection() {
     return container;
 }
 
-
-
 export {
     initAboutUsTitleCard,
     initAboutUsBody
