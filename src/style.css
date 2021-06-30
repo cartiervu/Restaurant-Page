@@ -65,7 +65,7 @@ li {
 
 
 
-#menu-header, #about-us-header {
+#menu-header {
     max-height: 500px;
     overflow: hidden;
     position: relative;
@@ -83,35 +83,38 @@ li {
     min-width: 967px;
 }
 
-#menu-header-text, #about-us-header-text {
+.title-card {
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.title-card-text-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#menu-header-title, #about-us-header-title {
+.title-card-text-title {
     font-weight: bold;
     font-size: 5em;
 }
 
-#menu-header-description, #about-us-header-description {
+.title-card-text-description {
     font-size: 1.5em;
 }
 
-#menu-image {
-    object-fit: contain;
-    margin-top: -30%;
-}
-
-#about-us-image {
+.title-card-image {
     object-fit: cover;
     height: 510px;
     width: 100%;
     object-position: bottom;
 }
 
-#menu, #about-us {
+#menu-body, #about-us-body {
     padding: 25px 150px 75px 150px;
 }
 

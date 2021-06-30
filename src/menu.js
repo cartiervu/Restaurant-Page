@@ -1,46 +1,50 @@
 import Dish from './dish';
+import { titleCard } from './titleCard';
 
-const menuHeaderTitleText = "OUR MENU";
-const menuHeaderDescripText = "Locally sourced and sustainable";
-const menuImageSource = "../src/assets/food-background.jpg";
+const TITLE = "OUR MENU";
+const DESCRIPTION = "Locally sourced and sustainable";
+const IMAGE_SOURCE = "../src/assets/food-background.jpg";
 
-
-function initMenuHeader() {
-    const menuHeader = document.createElement('div');
-    menuHeader.setAttribute('id', 'menu-header');
-
-    const menuImage = document.createElement('img');
-    menuImage.setAttribute('id', 'menu-image');
-    menuImage.src = menuImageSource;
-    menuImage.alt = "menu-image";
-    menuHeader.appendChild(menuImage);
-
-    const menuHeaderText = initMenuHeaderText();
-    menuHeader.appendChild(menuHeaderText);
-
-    return menuHeader;
+function initMenuTitleCard() {
+    return titleCard(TITLE, DESCRIPTION, IMAGE_SOURCE);
 }
 
-function initMenuHeaderText() {
-    const menuHeaderText = document.createElement('div');
-    menuHeaderText.setAttribute('id', 'menu-header-text');
+// function initMenuHeader() {
+//     const menuHeader = document.createElement('div');
+//     menuHeader.setAttribute('id', 'menu-header');
 
-    const menuTitle = document.createElement('h1');
-    menuTitle.setAttribute('id', 'menu-header-title');
-    menuTitle.textContent = menuHeaderTitleText;
-    menuHeaderText.appendChild(menuTitle);
+//     const menuImage = document.createElement('img');
+//     menuImage.setAttribute('id', 'menu-image');
+//     menuImage.src = menuImageSource;
+//     menuImage.alt = "menu-image";
+//     menuHeader.appendChild(menuImage);
 
-    const menuDescrip = document.createElement('h3');
-    menuDescrip.setAttribute('id', 'menu-header-description');
-    menuDescrip.textContent = menuHeaderDescripText;
-    menuHeaderText.appendChild(menuDescrip);
+//     const menuHeaderText = initMenuHeaderText();
+//     menuHeader.appendChild(menuHeaderText);
 
-    return menuHeaderText;
-}
+//     return menuHeader;
+// }
 
-function initMenu() {
+// function initMenuHeaderText() {
+//     const menuHeaderText = document.createElement('div');
+//     menuHeaderText.setAttribute('id', 'menu-header-text');
+
+//     const menuTitle = document.createElement('h1');
+//     menuTitle.setAttribute('id', 'menu-header-title');
+//     menuTitle.textContent = menuHeaderTitleText;
+//     menuHeaderText.appendChild(menuTitle);
+
+//     const menuDescrip = document.createElement('h3');
+//     menuDescrip.setAttribute('id', 'menu-header-description');
+//     menuDescrip.textContent = menuHeaderDescripText;
+//     menuHeaderText.appendChild(menuDescrip);
+
+//     return menuHeaderText;
+// }
+
+function initMenuBody() {
     const container = document.createElement('div');
-    container.setAttribute('id', 'menu');
+    container.setAttribute('id', 'menu-body');
 
     container.appendChild(initDishTypeContainer('appetizer'));
     container.appendChild(initDishTypeContainer('entree'));
@@ -158,6 +162,6 @@ function getSides() {
 }
 
 export {
-    initMenuHeader,
-    initMenu
+    initMenuTitleCard,
+    initMenuBody
 }

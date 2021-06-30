@@ -1,5 +1,5 @@
-import {initMenuHeader, initMenu} from './menu';
-import { initAboutUsHeader, initAboutUs } from './about-us';
+import { initMenuTitleCard, initMenuBody } from './menu';
+import { initAboutUsTitleCard, initAboutUsBody } from './about-us';
 import './style.css';
 
 const content = document.getElementById('content');
@@ -88,13 +88,13 @@ function loadLandingPage() {
 }
 
 function loadMenuPage() {
-    content.appendChild(initMenuHeader());
-    content.appendChild(initMenu());
+    content.appendChild(initMenuTitleCard());
+    content.appendChild(initMenuBody());
 }
 
 function loadAboutUsPage() {
-    content.appendChild(initAboutUsHeader());
-    content.appendChild(initAboutUs());
+    content.appendChild(initAboutUsTitleCard());
+    content.appendChild(initAboutUsBody());
 }
 
 function initLandingPage() {
