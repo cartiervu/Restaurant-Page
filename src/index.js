@@ -1,5 +1,6 @@
 import { initMenuTitleCard, initMenuBody } from './menu';
 import { initAboutUsTitleCard, initAboutUsBody } from './about-us';
+import { initVisitUsTitleCard } from './visitUs';
 import './style.css';
 
 const content = document.getElementById('content');
@@ -70,6 +71,9 @@ function initNavTabs() {
     const contactButton = document.createElement('li');
     contactButton.setAttribute('id', 'contact-button');
     contactButton.textContent = "visit us";
+    contactButton.addEventListener('click', () => {
+        switchTabs(loadVisitUsPage);
+    })
 
     list.appendChild(menuButton);
     list.appendChild(aboutButton);
@@ -95,6 +99,10 @@ function loadMenuPage() {
 function loadAboutUsPage() {
     content.appendChild(initAboutUsTitleCard());
     content.appendChild(initAboutUsBody());
+}
+
+function loadVisitUsPage() {
+    content.appendChild(initVisitUsTitleCard());
 }
 
 function initLandingPage() {
