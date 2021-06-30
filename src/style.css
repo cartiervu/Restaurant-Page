@@ -55,7 +55,7 @@ li {
     justify-content: space-between;
     background-color: black;
     color: white;
-    padding: 10px 50px 10px 50px;
+    padding: 20px 50px 20px 50px;
 }
 
 #directions {
@@ -65,7 +65,7 @@ li {
 
 
 
-#menu-header {
+#menu-header, #about-us-header {
     max-height: 500px;
     overflow: hidden;
     position: relative;
@@ -73,19 +73,29 @@ li {
     color: white;
 }
 
-#menu-header-text {
+#about-us-header {
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+    min-height: 430px;
+    min-width: 967px;
+}
+
+#menu-header-text, #about-us-header-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#menu-header-title {
+#menu-header-title, #about-us-header-title {
     font-weight: bold;
     font-size: 5em;
 }
 
-#menu-header-description {
+#menu-header-description, #about-us-header-description {
     font-size: 1.5em;
 }
 
@@ -94,7 +104,14 @@ li {
     margin-top: -30%;
 }
 
-#menu {
+#about-us-image {
+    object-fit: cover;
+    height: 510px;
+    width: 100%;
+    object-position: bottom;
+}
+
+#menu, #about-us {
     padding: 25px 150px 75px 150px;
 }
 

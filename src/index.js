@@ -1,6 +1,6 @@
 import {initMenuHeader, initMenu} from './menu';
+import { initAboutUsHeader, initAboutUs } from './about-us';
 import './style.css';
-import img from '../src/assets/food-background.jpg'
 
 const content = document.getElementById('content');
 
@@ -63,6 +63,9 @@ function initNavTabs() {
     const aboutButton = document.createElement('li');
     aboutButton.setAttribute('id', 'about-button');
     aboutButton.textContent = "about"
+    aboutButton.addEventListener('click', () => {
+        switchTabs(loadAboutUsPage);
+    })
 
     const contactButton = document.createElement('li');
     contactButton.setAttribute('id', 'contact-button');
@@ -87,6 +90,11 @@ function loadLandingPage() {
 function loadMenuPage() {
     content.appendChild(initMenuHeader());
     content.appendChild(initMenu());
+}
+
+function loadAboutUsPage() {
+    content.appendChild(initAboutUsHeader());
+    content.appendChild(initAboutUs());
 }
 
 function initLandingPage() {
