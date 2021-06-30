@@ -1,10 +1,13 @@
+import {initMenuHeader, initMenu} from './menu';
 import './style.css';
 import img from '../src/assets/food-background.jpg'
 
 const content = document.getElementById('content');
 
 function switchTabs(tabFunction) {
-    content.removeChild(content.childNodes[0]);
+    while (content.firstChild) {
+        content.removeChild(content.lastChild);
+    }
     tabFunction();
 }
 
@@ -53,6 +56,9 @@ function initNavTabs() {
     const menuButton = document.createElement('li');
     menuButton.setAttribute('id', 'menu-button');
     menuButton.textContent = "menu";
+    menuButton.addEventListener('click', () => {
+        switchTabs(loadMenuPage);
+    })
 
     const aboutButton = document.createElement('li');
     aboutButton.setAttribute('id', 'about-button');
@@ -69,8 +75,9 @@ function initNavTabs() {
     return nav;
 }
 
-function loadHeader() {
+function loadHeaderAndFooter() {
     document.body.prepend(initHeader());
+    document.body.append(initFooter());
 }
 
 function loadLandingPage() {
@@ -78,16 +85,13 @@ function loadLandingPage() {
 }
 
 function loadMenuPage() {
-    content.appendChild(initMenuPage());
-}
-
-function initMenuPage() {
+    content.appendChild(initMenuHeader());
+    content.appendChild(initMenu());
 }
 
 function initLandingPage() {
     const wrapper = document.createElement('div');
     wrapper.appendChild(initHero());
-    wrapper.appendChild(initContactContainer());
 
     return wrapper;
 }
@@ -104,8 +108,8 @@ function initHero() {
     return container;
 }
 
-function initContactContainer() {
-    const container = document.createElement('div');
+function initFooter() {
+    const container = document.createElement('footer');
     container.setAttribute('id', 'contact-container');
     
     container.appendChild(initContactInfoDiv("hours", "HOURS", "Monday to Friday - 9am to 5pm"));
@@ -152,5 +156,5 @@ function initLocationInfoDiv() {
     return locationDiv;
 }
 
-
-loadHeader();
+loadHeaderAndFooter();
+loadLandingPage();

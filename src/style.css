@@ -95,45 +95,39 @@ li {
 }
 
 #menu {
-    padding: 25px 150px 25px 150px;
+    padding: 25px 150px 75px 150px;
 }
 
-.menu-col-container {
+.dish-col-container {
     display: flex;
     flex-direction: row;
 }
 
-.menu-left-col, .menu-right-col {
+.dish-left-col, .dish-right-col {
     width: 50%;
     min-width: 200px;
 }
 
-.item-container {
-}
 
-.menu-left-col {
+.dish-left-col {
     padding-right: 15px;
 }
 
-.menu-right-col {
+.dish-right-col {
     padding-left: 15px;
 }
 
-.item-name-price-container {
+.dish-name-price-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.item-name {
-
 }
 
 .dish-type-container {
     padding-top: 25px;
 }
 
-.item-description {
+.dish-description {
     opacity: 50%;
 }
 
