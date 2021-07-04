@@ -27,11 +27,11 @@ function firstBodySection() {
     text.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus tristique dui vel tincidunt. Nullam orci leo, ultricies ac dignissim sed, cursus vitae metus. Sed consequat nisi vulputate maximus scelerisque. Curabitur lacus augue, porttitor vel ultrices nec, luctus non ligula. Curabitur in maximus ex. Nullam luctus, dolor a aliquet fringilla, purus tortor tristique tortor, quis eleifend dui velit eget enim. Aenean mattis ante nec felis fermentum gravida. Nam venenatis ex commodo quam hendrerit dignissim. Nulla aliquam lorem ac quam consectetur, at pharetra sem facilisis. Proin et tellus porta, molestie augue mattis, varius tortor. Etiam gravida, nunc porta ultricies convallis, nunc erat ultricies sapien, vitae tempus diam elit et sem. Donec sodales, augue in volutpat feugiat, urna nibh placerat leo, eu cursus nisi metus sed nunc.`;
     container.appendChild(text);
 
-    const image = document.createElement('img');
-    image.classList.add('about-us-body-image');
-    image.setAttribute('id', 'about-us-body-right-image');
-    image.src = '../src/assets/waiter.jpg';
-    container.appendChild(image);
+    // const image = document.createElement('img');
+    // image.classList.add('about-us-body-image');
+    // image.setAttribute('id', 'about-us-body-right-image');
+    // image.src = '../src/assets/waiter.jpg';
+    // container.appendChild(image);
 
     return container;
 }
@@ -40,11 +40,11 @@ function secondBodySection() {
     const container = document.createElement('div');
     container.classList.add('about-us-body-section');
 
-    const image = document.createElement('img');
-    image.classList.add('about-us-body-image');
-    image.setAttribute('id', 'about-us-body-left-image');
-    image.src = '../src/assets/waiter(1).jpg';
-    container.appendChild(image);
+    // const image = document.createElement('img');
+    // image.classList.add('about-us-body-image');
+    // image.setAttribute('id', 'about-us-body-left-image');
+    // image.src = '../src/assets/waiter(1).jpg';
+    // container.appendChild(image);
 
     const text = document.createElement('p');
     text.classList.add('about-us-body-text');

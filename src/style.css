@@ -114,12 +114,8 @@ li {
     object-position: bottom;
 }
 
-#menu-body{
-    padding: 25px 300px 75px 300px;
-}
-
-#about-us-body {
-    padding: 25px 300px 75px 300px;
+#menu-body, #about-us-body {
+    padding: 25px 225px 75px 225px;
 }
 
 .about-us-body-section {
@@ -130,9 +126,9 @@ li {
     padding: 30px 0 30px 0;
 }
 
-.about-us-body-image {
-    max-height: 400px;
-    width: auto;
+/* .about-us-body-image {
+    height: auto;
+    width: 50%;
 }
 
 #about-us-body-left-image {
@@ -141,7 +137,7 @@ li {
 
 #about-us-body-right-image {
     padding-left: 50px;
-}
+} */
 
 .dish-col-container {
     display: flex;
